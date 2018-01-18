@@ -12,7 +12,7 @@ body {
 }
 
 .button .btn {
-  border: none;
+  border: 0;
   background: #f05f40;
   padding: 15px 30px;
   border-radius: 70px;
@@ -22,18 +22,16 @@ body {
   font-weight: 700;
 }
 
-.button a {
-  text-decoration: none;
-}
-
 .button {
   margin-top: 30px;
 }
 
 .line {
+  position: relative;
   max-width: 50px;
   border-width: 5px;
   border-color: #f05f40;
+  z-index: -1;
 }
 
 footer, section .container {
@@ -43,6 +41,15 @@ footer, section .container {
 
 header {
   position: relative;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11111;
+  transition: all .4s;
 }
 
 .main-nav .main-logo a {
@@ -83,6 +90,19 @@ header {
   text-transform: uppercase;
 }
 
+.nav-black {
+  background: rgb(255, 255, 255);
+  border-bottom: rgba(33,37,41,.1);
+}
+
+.nav-black .main-logo a {
+  color: #f05f40;
+}
+
+.nav-black ul li a {
+  color: #000000;
+}
+
 .toggle {
   width: 100%;
   background: #ffffff;
@@ -114,6 +134,7 @@ header {
 .hero {
   background: url(../images/header.jpg) center/cover;
   height: 100vh;
+  z-index: 1;
 }
 
 .header-text {
@@ -288,6 +309,7 @@ header {
   
   .main-nav {
     background: #ffffff;
+    border-bottom: 1px solid rgba(33,37,41,.1);
   }
   
   .main-nav .logo-nav {
@@ -305,6 +327,8 @@ header {
   
   .main-nav ul li a {
     color: #000000;
+    font-size: 1.5rem;
+    line-height: 40px;
   }
   
   .main-nav ul li a:hover {
